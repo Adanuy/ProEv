@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel>
+<schema name="public" protected="true" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<database name="novo_banco_de_dados">
+</database>
+
+<table name="participante">
+	<schema name="public"/>
+	<position x="15" y="12"/>
+	<column name="id_part">
+		<type name="integer"/>
+	</column>
+	<column name="nome_part">
+		<type name="character" length="30"/>
+	</column>
+	<column name="cpf_part">
+		<type name="integer"/>
+	</column>
+	<column name="cep_part">
+		<type name="character varying" length="10"/>
+	</column>
+	<column name="cidade_part">
+		<type name="character" length="20"/>
+	</column>
+	<column name="bairro_part">
+		<type name="character varying" length="20"/>
+	</column>
+	<column name="end_part">
+		<type name="character varying" length="30"/>
+	</column>
+	<column name="pref_curso_part">
+		<type name="character varying" length="25"/>
+	</column>
+	<column name="tel_part">
+		<type name="character varying" length="15"/>
+	</column>
+	<column name="email_part">
+		<type name="character varying" length="40"/>
+	</column>
+	<column name="senha_part">
+		<type name="character varying" length="10"/>
+	</column>
+	<constraint name="id_part" type="pk-constr" factor="10" table="public.participante">
+		<columns names="id_part" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="coordenador">
+	<schema name="public"/>
+	<position x="937" y="245"/>
+	<column name="id_coord">
+		<type name="integer"/>
+	</column>
+	<column name="nome_coord">
+		<type name="character" length="40"/>
+	</column>
+	<column name="cpf_coord">
+		<type name="integer"/>
+	</column>
+	<column name="curso_resp_coord">
+		<type name="character" length="20"/>
+	</column>
+	<column name="email_coord">
+		<type name="character varying" length="40"/>
+	</column>
+	<column name="senha_coord">
+		<type name="character varying" length="10"/>
+	</column>
+	<column name="conf_senha_coord">
+		<type name="character varying" length="10"/>
+	</column>
+	<constraint name="id_coord" type="pk-constr" factor="10" table="public.coordenador">
+		<columns names="id_coord" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="administrador">
+	<schema name="public"/>
+	<position x="916" y="12"/>
+	<column name="id_admin">
+		<type name="integer"/>
+	</column>
+	<column name="nome_admin">
+		<type name="character" length="20"/>
+	</column>
+	<column name="cpf_admin">
+		<type name="integer"/>
+	</column>
+	<column name="senha_admin">
+		<type name="character varying" length="10"/>
+	</column>
+	<constraint name="id_admin" type="pk-constr" factor="10" table="public.administrador">
+		<columns names="id_admin" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="instituição">
+	<schema name="public"/>
+	<position x="420" y="405"/>
+	<column name="id_inst">
+		<type name="integer"/>
+	</column>
+	<column name="nome_inst">
+		<type name="character varying"/>
+	</column>
+	<column name="cep_inst">
+		<type name="character varying" length="10"/>
+	</column>
+	<column name="cidade_inst">
+		<type name="character" length="20"/>
+	</column>
+	<column name="bairro_inst">
+		<type name="character" length="10"/>
+	</column>
+	<column name="end_inst">
+		<type name="character varying" length="20"/>
+	</column>
+	<column name="tel_inst">
+		<type name="character varying" length="15"/>
+	</column>
+	<column name="email_inst">
+		<type name="character varying" length="40"/>
+	</column>
+	<column name="status_inst">
+		<type name="boolean"/>
+	</column>
+	<constraint name="id_inst" type="pk-constr" factor="10" table="public.&quot;instituição&quot;">
+		<columns names="id_inst" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="curso">
+	<schema name="public"/>
+	<position x="817" y="587"/>
+	<column name="id_curso">
+		<type name="integer"/>
+	</column>
+	<column name="nome_curso">
+		<type name="character varying" length="20"/>
+	</column>
+	<column name="descricao_curso">
+		<type name="character varying" length="300"/>
+	</column>
+	<constraint name="id_curso" type="pk-constr" factor="10" table="public.curso">
+		<columns names="id_curso" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="evento">
+	<schema name="public"/>
+	<position x="466" y="27"/>
+	<column name="id_evento">
+		<type name="integer"/>
+	</column>
+	<column name="nome_palestrante">
+		<type name="character varying" length="50"/>
+	</column>
+	<column name="nome_evento">
+		<type name="character" length="30"/>
+	</column>
+	<column name="data_inic_evento">
+		<type name="date"/>
+	</column>
+	<column name="data_fim_evento">
+		<type name="date"/>
+	</column>
+	<column name="hora_inic_evento">
+		<type name="date"/>
+	</column>
+	<column name="hora_fim_evento">
+		<type name="date"/>
+	</column>
+	<column name="descricao_evento">
+		<type name="character varying" length="500"/>
+	</column>
+	<column name="quant_part_evento">
+		<type name="integer"/>
+	</column>
+	<column name="quant_atual_part">
+		<type name="integer"/>
+	</column>
+	<constraint name="id_evento" type="pk-constr" factor="10" table="public.evento">
+		<columns names="id_evento" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<table name="certificado">
+	<schema name="public"/>
+	<position x="13" y="324"/>
+	<column name="id_cert">
+		<type name="integer"/>
+	</column>
+	<column name="pdf_cert">
+		<type name="oid"/>
+	</column>
+	<constraint name="id_cert" type="pk-constr" factor="10" table="public.certificado">
+		<columns names="id_cert" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="instituição_has_many_curso" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="3" constr-indexes="1"
+	 src-table="public.&quot;instituição&quot;"
+	 dst-table="public.curso"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="instituição_has_many_coordenador" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="7" constr-indexes="1"
+	 src-table="public.&quot;instituição&quot;"
+	 dst-table="public.coordenador"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="participante_has_many_evento" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="10" constr-indexes="1"
+	 src-table="public.participante"
+	 dst-table="public.evento"
+	 src-required="false" dst-required="false">
+	<label ref-type="dst-label">
+		<position x="0" y="0"/>
+	</label>
+</relationship>
+
+<relationship name="instituição_has_many_evento" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="11" constr-indexes="2"
+	 src-table="public.&quot;instituição&quot;"
+	 dst-table="public.evento"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="administrador_has_one_instituição" type="rel11"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="4" constr-indexes="1,2"
+	 src-table="public.&quot;instituição&quot;"
+	 dst-table="public.administrador"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="coordenador_has_many_curso" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="4" constr-indexes="2"
+	 src-table="public.coordenador"
+	 dst-table="public.curso"
+	 src-required="false" dst-required="false"/>
+
+<table name="certificado_cadast">
+	<schema name="public"/>
+	<position x="47" y="435"/>
+	<column name="id_certificado_cadast">
+		<type name="integer"/>
+	</column>
+	<column name="descri_certificado">
+		<type name="character varying" length="500"/>
+	</column>
+	<column name="assinat_certificado">
+		<type name="oid"/>
+	</column>
+	<constraint name="certificado_cadast" type="pk-constr" factor="10" table="public.certificado_cadast">
+		<columns names="id_certificado_cadast" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="evento_has_one_certificado_cadast" type="rel11"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="12" constr-indexes="3,4"
+	 src-table="public.certificado_cadast"
+	 dst-table="public.evento"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="participante_has_many_certificado" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="1" constr-indexes="1"
+	 src-table="public.participante"
+	 dst-table="public.certificado"
+	 src-required="false" dst-required="false"/>
+
+<table name="credencial">
+	<schema name="public"/>
+	<position x="85" y="571"/>
+	<column name="id_cred">
+		<type name="integer"/>
+	</column>
+	<column name="pdf_cred">
+		<type name="oid"/>
+	</column>
+	<constraint name="credencial" type="pk-constr" factor="10" table="public.credencial">
+		<columns names="id_cred" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<relationship name="participante_has_many_credencial" type="rel1n"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 col-indexes="2" constr-indexes="1"
+	 src-table="public.participante"
+	 dst-table="public.credencial"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>
